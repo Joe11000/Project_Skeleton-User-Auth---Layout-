@@ -29,8 +29,8 @@ post '/create_post/:category_id' do
     edit_post_url = newpost.encrypted_url
     puts "/n/n/n encryped_url = \"#{edit_post_url}\""
 
-    redirect to "/category/#{params[:post][:category_id]}"
-    # or redirect to "/category/#{params[:category_id]}"
+    redirect to "/category/#{params[:category_id]}"
+    # or redirect to "/category/#{params[:post][:category_id]}"
 end
 
 get '/list_posts_for_category/:category_id' do
@@ -55,6 +55,3 @@ post '/create_category' do
 
     redirect to '/list_posts_for_category/:category_id' # check out the new category page
 end
-
-
-
