@@ -1,0 +1,12 @@
+<!-- This requires a category instance  @current_category  -->
+
+<h1><%= @current_category.try(:title)%></h1>
+<!-- for each post in the correct category, reverse order and iterate -->
+
+  <!-- add post to screen -->
+  <form action="/create_post" method="post">
+    <input type="hidden" name="post[category_id]" value="<%= @current_category.try(:id) %>" > 
+    <input type="text"   name="post[text]"        value="<%= @post_to_edit.try(:text) %>"> 
+    <!-- <input type="submit" value="Cancel"> -->
+    <input type="submit" value="Submit Post">
+  </form>

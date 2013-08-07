@@ -1,0 +1,15 @@
+<!-- This requires a category instance  @current_category  -->
+
+<h1><%= @current_category.name%></h1>
+
+<!-- for each post in the correct category, reverse order and iterate -->
+<% Post.find_by_category_id(@current_category.id).reverse.each do |post|%>
+  <!-- add post to screen -->
+  <div><%= post.text %></div>
+<% end %>
+
+<!-- submit bottom at bottom -->
+<form action="/create" method="get">
+  
+  <input type="submit" value="Create Post">
+</form>

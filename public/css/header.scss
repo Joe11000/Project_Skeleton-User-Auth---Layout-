@@ -1,0 +1,40 @@
+$header_height:100px;
+$header_corner_radius:5px;
+
+div.header
+{
+  height:$header_height;
+  display:block;
+  background-color:green;
+  border-bottom-left-radius:  $header_corner_radius;
+  border-bottom-right-radius: $header_corner_radius;
+  border:3px inset gray;
+  width:100%;
+
+  div
+  {
+    display:inline-block;
+
+    img
+    {
+      margin:auto 10px;
+      display:inline-block;
+      resize:both;
+      width:  $header_height * 0.8;
+      height: $header_height * 0.8;
+      border: 3px inset gray;
+    }
+  }
+
+  a
+  {
+    display:inline;
+    margin:auto 10px;
+    text-decoration:none;
+    height: $header_height * 0.6;
+    color:yellow;
+    font-weight:400;
+    font-family:"Times New Roman", Times, serif;
+    font:italic Georgia, serif;
+  }
+}

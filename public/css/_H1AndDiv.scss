@@ -1,0 +1,24 @@
+@mixin TitleOfPage
+{
+    h1
+    {
+      color:yellow;
+      font-weight:400;
+      font-family:"Times New Roman", Times, serif;
+      font:italic Georgia, serif;
+    }
+
+}
+
+@mixin divBorder
+ {
+    div
+    {
+      border:3px ridge yellow;
+      text-align:center;
+      margin: 20px auto;
+      
+      p { color:gray; padding:10px;}
+
+    }
+}

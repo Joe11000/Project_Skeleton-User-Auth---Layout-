@@ -1,0 +1,17 @@
+<div class="container">
+  
+  <h1><%= @current_category.title %></h1>
+
+    <h3>Respond to current category below.</h3>
+
+    <div>
+      <ul>
+        <% @posts_list.each do |p|%>
+            <li><%= p.title %></li>
+        <% end %>
+      <ul>
+    </div>
+
+    <a href="/create_post/<%= current_category.id %>">Post to Category</a>
+
+</div>
